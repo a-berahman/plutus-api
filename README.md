@@ -84,7 +84,7 @@ curl -X GET http://localhost:8080/api/v1/transactions/{id}
 
 - `GET /api/v1/transactions`: Get all transactions
 ```
-curl -X GET "http://localhost:8080/api/v1/transactions?page={page}&pageSize={pageSize}"
+curl -X GET "http://localhost:8080/api/v1/transactions?page=1&pageSize=10"
 ```
 
 - `PUT /api/v1/transactions/:id`: Update a transaction by ID
