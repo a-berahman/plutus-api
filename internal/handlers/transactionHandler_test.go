@@ -36,9 +36,10 @@ func TestTransactionHandler(t *testing.T) {
 			},
 			request: func() *http.Request {
 				transaction := models.TransactionCreateRequest{
-					Amount: 100,
-					Type:   "credit",
-					UserID: 1,
+					Amount:   "100.00",
+					Type:     "credit",
+					UserID:   1,
+					Currency: "usd",
 				}
 				jsonBytes, _ := json.Marshal(transaction)
 				req := httptest.NewRequest(http.MethodPost, "/transactions", bytes.NewBuffer(jsonBytes))

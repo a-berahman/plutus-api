@@ -11,9 +11,17 @@ const (
 	Debit  TransactionType = "debit"
 )
 
+type TransactionCurrency string
+
+const (
+	USD TransactionCurrency = "usd"
+	EUR TransactionCurrency = "eur"
+)
+
 type Transaction struct {
 	gorm.Model
-	UserID uint
-	Amount int64
-	Type   TransactionType
+	UserID   uint
+	Amount   int64
+	Currency TransactionCurrency
+	Type     TransactionType
 }

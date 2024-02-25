@@ -74,7 +74,7 @@ curl -X DELETE http://localhost:8080/api/v1/users/{id}
 
 - `POST /api/v1/transactions`: Create a new transaction
 ```
-curl -X POST -H "Content-Type: application/json" -d '{"userId":1, "amount":1000, "type":"credit"}' http://localhost:8080/api/v1/transactions
+curl -X POST -H "Content-Type: application/json" -d '{"userId":1, "amount":"100.50", "currency":"usd", "type":"credit"}' http://localhost:8080/api/v1/transactions
 ```
 
 - `GET /api/v1/transactions/:id`: Get a transaction by ID
@@ -89,5 +89,5 @@ curl -X GET "http://localhost:8080/api/v1/transactions?page={page}&pageSize={pag
 
 - `PUT /api/v1/transactions/:id`: Update a transaction by ID
 ```
-curl -X PUT -H "Content-Type: application/json" -d '{"amount":2000, "type":"debit"}' http://localhost:8080/api/v1/transactions/{id}
+curl -X PUT -H "Content-Type: application/json" -d '{"amount":"2000.50", "type":"debit"}' http://localhost:8080/api/v1/transactions/{id}
 ```
